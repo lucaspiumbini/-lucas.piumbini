@@ -1,0 +1,23 @@
+#Escreva um programa em python que leia números inteiros do teclado. O programa deve ler os números até que o usuário digite 0 (zero).
+#No final da execução, exiba a quantidade de números digitados, assim como a soma e a média aritmética.
+
+soma = 0
+cont = 0
+media = 0
+valor = 0
+controle = True
+
+while controle == True:
+    valor = input("Informe um número inteiro (Para encerrar digite 0): ")
+
+    if int(valor) > 0:
+        soma = int(valor) + soma
+
+        cont = cont + 1
+
+    else:
+        media = soma / cont
+
+        controle = False
+
+print(f"\nForam informado(s) {cont} número(s), a média aritmética da soma do(s) número(s) é igual a {media}")
