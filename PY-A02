@@ -1,0 +1,19 @@
+'''[PY-A02]Escreva um programa em Python que receba duas listas como entrada do usuário e retorne uma 
+tupla contendo os elementos em comum entre as duas listas e a soma desses elementos.'''
+
+list1 = input("Digite a primeira lista de números separada por vírgula: ").split(',')
+list2 = input("Digite a segunda lista de números separada por vírgula: ").split(',')
+
+lista1 = [int(elemento) for elemento in list1]
+lista2 = [int(elemento) for elemento in list2]
+
+conj1 = set(list1)
+conj2 = set(list2)
+
+elementoscomum = conj1.intersection(conj2)
+
+soma = sum(elementoscomum)
+
+
+print("Elementos em comum entre as listas:", elementoscomum)
+print("Soma dos elementos em comum:", soma)
