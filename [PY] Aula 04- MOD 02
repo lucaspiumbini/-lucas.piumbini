@@ -1,0 +1,37 @@
+def calcular_media(notas):
+    if len(notas) > 0:
+        return sum(notas) / len(notas)
+    
+    else:
+        return 0
+
+def verificar_situacao(media):
+    if media == 10:
+        return "Parabéns, sua média é 10!"
+    
+    elif media >= 7:
+        return "Aprovado"
+    
+    else:
+        return "Reprovado"
+
+
+lista_notas = []
+cond = True
+
+while cond == True:
+    nota = input("Digite a nota do aluno (ou 'sair' para finalizar): ")
+        
+    if nota == 'sair':
+        cond = False
+        
+    else:
+        nota = float(nota)
+        lista_notas.append(nota)
+
+    
+media = calcular_media(lista_notas)
+situacao = verificar_situacao(media)
+    
+print(f"A média do aluno é: {media}")
+print(f"Situação do aluno: {situacao}")
