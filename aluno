@@ -1,0 +1,42 @@
+alunos = {}
+
+def adicionar_aluno():
+    nome = input("Digite o nome do aluno: ")
+    matricula = input("Digite o número de matrícula: ")
+
+    alunos[matricula] = nome
+
+    print(f"Aluno {nome} com matrícula {matricula} adicionado com sucesso!")
+
+def remover_aluno():
+    matricula = input("Digite o número de matrícula do aluno que deseja remover: ")
+    
+    if matricula in alunos:
+        nome = alunos.pop(matricula)
+
+        print(f"Aluno {nome} com matrícula {matricula} removido com sucesso!")
+
+    else:
+        print("Número de matrícula não encontrado.")
+
+def atualizar_aluno():
+    matricula = input("Digite o número de matrícula do aluno que deseja atualizar: ")
+
+    if matricula in alunos:
+        novo_nome = input("Digite o novo nome do aluno: ")
+        alunos[matricula] = novo_nome
+
+        print(f"Nome do aluno com matrícula {matricula} atualizado para {novo_nome}.")
+
+    else:
+        print("Número de matrícula não encontrado.")
+
+def ver_alunos():
+    if alunos:
+        print("Lista de Alunos:")
+
+        for matricula, nome in alunos.items():
+            print(f"Matrícula: {matricula}, Nome: {nome}")
+
+    else:
+        print("Não há alunos cadastrados.")
