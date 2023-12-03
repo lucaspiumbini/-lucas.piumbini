@@ -1,0 +1,33 @@
+import aluno
+
+cond = True
+
+while cond = True:
+    print("\nOPÇÕES")
+    print("1. Adicionar aluno;")
+    print("2. Remover aluno;")
+    print("3. Atualizar aluno;")
+    print("4. Ver todos os alunos;")
+    print("5. Sair.")
+    
+    escolha = input("Escreva a opção desejada: ")
+    
+    if escolha == '1':
+        aluno.adicionar_aluno()
+
+    elif escolha == '2':
+        aluno.remover_aluno()
+
+    elif escolha == '3':
+        aluno.atualizar_aluno()
+
+    elif escolha == '4':
+        aluno.ver_alunos()
+
+    elif escolha == '5':
+        print("Encerrando o programa...")
+
+        cond = False
+
+    else:
+        print("Opção inválida. Por favor, escolha uma opção válida.")
