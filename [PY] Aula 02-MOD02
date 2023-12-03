@@ -1,0 +1,28 @@
+num = []
+par = []
+impar = []
+
+
+for x in range(10):
+    numero = int(input(f"Digite o {x + 1}º número: "))
+    num.append(numero)
+
+    if numero % 2 == 0:
+        par.append(numero)
+
+    else:
+        impar.append(numero)
+
+
+print("Números pares:", par)
+
+tupla_impar = tuple(impar)
+print("Números ímpares:", tupla_impar)
+
+print("Quantidade de números pares:", len(par))
+print("Quantidade de números ímpares:", len(impar))
+
+soma_par = sum(par)
+soma_impar = sum(impar)
+print("Soma dos números pares:", soma_par)
+print("Soma dos números ímpares:", soma_impar)
