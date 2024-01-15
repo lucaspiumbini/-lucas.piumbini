@@ -1,0 +1,27 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def realizar_login():
+    email = entradaemail.get()
+    senha = entradasenha.get()
+
+    if '@' in email and len(senha) > 6:
+        messagebox.showinfo("Login realizado", "Login realizado com sucesso!")
+    else:
+        messagebox.showerror("Erro de login", "E-mail ou senha inválidos.")
+
+janela = tk.Tk()
+janela.title('Login')
+
+tk.Label(janela, text= "E-mail:").pack(pady=10)
+entradaemail = tk.Entry(janela)
+entradaemail.pack(pady=5)
+
+tk.Label(janela, text= "Senha:").pack(pady=10)
+entradasenha = tk.Entry(janela, show='*')
+entradasenha.pack(pady=5)
+
+butlogin = tk.Button(janela, text= 'Login', command= realizar_login)
+butlogin.pack(pady=10)
+
+janela.mainloop()
