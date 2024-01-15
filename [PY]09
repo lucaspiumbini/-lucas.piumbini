@@ -1,0 +1,23 @@
+import tkinter as tk
+
+def convertercm():
+    valorcm = float(entradacm.get())
+
+    valorm = valorcm / 100.0
+
+    resultadovar.set(f"{valorcm} cm é igual a {valorm:.2f} m.")
+
+janela = tk.Tk()
+janela.title("Conversor de Centímetros para Metros")
+
+resultadovar = tk.StringVar()
+
+tk.Label(janela, text="Digite a medida em centímetros:").pack(pady=10)
+
+entradacm = tk.Entry(janela)
+entradacm.pack(pady=10)
+
+tk.Button(janela, text="Converter", command=convertercm).pack(pady=10)
+tk.Label(janela, textvariable=resultadovar).pack(pady=10)
+
+janela.mainloop()
