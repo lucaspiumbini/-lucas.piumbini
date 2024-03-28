@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Fomulário</title>
+</head>
+
+<body>
+    <form>
+        <h1>Formulário de cadastro</h1>
+        <p>Complete com suas informações:</p>
+        <label for="name">Nome:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+        <label for="lname">Telefone:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+
+        <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+        <label for="tipo">Sexo?</label><br>
+        <label>
+            <input type="radio" id="tipo" name="tipo" value="Front-end">
+            Masculino
+        </label>
+
+        <label>
+            <input type="radio" id="tipo" name="tipo" value="Back-end">
+            Feminino
+        </label><br><br>
+
+        <label for="programas">Selecione quais linguagens de programação você utiliza:</label><br>
+        <label>
+            <input type="checkbox" id="programas" name="html" value="html">
+            HTML
+        </label>
+
+        <label>
+            <input type="checkbox" id="programas" name="css" value="css">
+            CSS
+        </label>
+
+        <label>
+            <input type="checkbox" id="programas" name="javascript" value="javascript">
+            JavaScript
+        </label>
+            
+        <label>
+            <input type="checkbox" id="programas" name="python" value="python">
+            Python
+        </label>
+
+        <label>
+            <input type="checkbox" id="programas" name="java" value="java">
+            Java
+        </label>
+
+        <label for="experiencia">Conte um pouco sobre suas experiências:</label><br>
+            <textarea id="experiencia" name="experiencia" rows="8" cols="70">
+            </textarea><br><br>
+        
+        <input type="submit" id="enviar" name="enviar" value="Enviar">
+        <input type="submit" id="cancelar" name="cancelar" value="Cancelar">
+    </form>
+</body>
+</html>
