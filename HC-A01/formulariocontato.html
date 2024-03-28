@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Fomulário de contato</title>
+</head>
+
+<body>
+    <form>
+        <h1>Formulário para contato</h1>
+        <p>Complete com suas informações</p>
+        <label for="name">Nome comleto:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+        <label for="assunto">Assunto:</label><br>
+            <select name="assunto" id="assunto">
+                <option>Selecione</option>
+                <option value="orcamento">Solicitação de serviço</option>
+                <option value="clt">Oportunidade profissional</option>
+                <option value="outros">Outros</option>
+            </select><br><br>
+
+        <label for="descricao">Breve descrição do motivo do contato:</label><br>
+            <textarea id="descricao" name="descricao" rows="10" cols="50">
+            </textarea><br><br>
+        
+        <input type="submit" id="enviar" name="enviar" value="Enviar"><br><br><br>
+
+        <a href="curriculo.html" target="_blank">Home page</a>
+    </form>
+</body>
+</html>
