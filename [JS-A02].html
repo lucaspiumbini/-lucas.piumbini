@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Javascript</title>
+</head>
+
+<body>
+    <h1>Exercícios de Javascript</h1>
+    <div>
+        <label for="entrada1">Seu nome: </label>
+        <input type="text" name="entrada" id="entrada1">
+    </div>
+
+    <div>
+        <label for="entrada2">Sua altura (em cm): </label>
+        <input type="text" name="entrada" id="entrada2">
+    </div>
+
+    <div>
+        <label for="entrada3">Seu peso: </label>
+        <input type="text" name="entrada" id="entrada3">
+    </div>
+
+    <p id="resultado">Resultado: </p>
+    <button onclick="actionChat()">Calcule IMC</button>
+    <button onclick="clearChat()">Limpar</button>
+
+    
+    <script>
+        function actionChat() {
+
+            let paragraph = document.getElementById('resultado')
+            let nome = document.getElementById('entrada1').value
+            let altura = parseFloat(document.getElementById('entrada2').value)
+            let peso = parseFloat(document.getElementById('entrada3').value)
+
+            if(!nome || !altura || !peso ) {alert('Você não informou uma mensagem') 
+
+            }
+            else {
+                altura_m = altura /100;
+                let imc = peso / (altura_m * altura_m)
+
+
+                if (imc < 16) {
+                   let classe = 'Baixo peso muito grave';
+                   paragraph.innerText += `\n${nome} seu índice corporal é de ${imc} então você corresponde a classificação: ${classe}`;
+                }
+
+                else if (imc > 16 && imc < 16.99) {
+                    let classe = 'Baixo peso grave';
+                    paragraph.innerText += `\n${nome} seu índice corporal é de ${imc} então você corresponde a classificação: ${classe}`;
+                }
+
+                else if (imc > 17 && imc < 18.49) {
+                    let classe = 'Baixo peso';
+                    paragraph.innerText += `\n${nome} seu índice corporal é de ${imc} então você corresponde a classificação: ${classe}`;
+                }
+
+                else if (imc > 18.50 && imc < 24.49) {
+                    let classe = 'Peso normal';
+                    paragraph.innerText += `\n${nome} seu índice corporal é de ${imc} então você corresponde a classificação: ${classe}`;
+                }
+
+                else if (imc > 25 && imc < 29.99) {
+                    let classe = 'Sobrepeso';
+                    paragraph.innerText += `\n${nome} seu índice corporal é de ${imc} então você corresponde a classificação: ${classe}`;
+                }
+
+                else if (imc > 30 && imc < 34.99) {
+                    let classe = 'Obesidade grau I';
+                    paragraph.innerText += `\n${nome} seu índice corporal é de ${imc} então você corresponde a classificação: ${classe}`;
+                }
+
+                else if (imc > 35 && imc < 39.99) {
+                    let classe = 'Obesidade grau II';
+                    paragraph.innerText += `\n${nome} seu índice corporal é de ${imc} então você corresponde a classificação: ${classe}`;
+                }
+
+                else if (imc >= 40) {
+                    let classe = 'Obesidade grau III';
+                    paragraph.innerText += `\n${nome} seu índice corporal é de ${imc} então você corresponde a classificação: ${classe}`;
+                }
+            }
+        }   
+
+        function clearChat() {
+
+            document.getElementById('resultado').innerHTML = 'Resultado: ';
+        }
+    </script>
+
+</body>
+
+</html>
